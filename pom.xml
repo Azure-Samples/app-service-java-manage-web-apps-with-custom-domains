@@ -3,24 +3,30 @@
     <groupId>com.microsoft.azure</groupId>
     <artifactId>app-service-java-manage-web-apps-with-custom-domains</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ManageWebAppWithDomainSsl</name>
+    <name>ManageWebAppWithDomainSsl.java</name>
     <description></description>
     <url>https://github.com/Azure/app-service-java-manage-web-apps-with-custom-domains</url>
     <dependencies>
         <dependency>
             <groupId>com.microsoft.azure</groupId>
             <artifactId>azure</artifactId>
-            <version>1.0.0-beta4.1</version>
+            <version>1.0.0-beta5</version>
         </dependency>
     </dependencies>
     <build>
+        <sourceDirectory>src</sourceDirectory>
+        <resources>
+            <resource>
+                <directory>resources</directory>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.4.0</version>
                 <configuration>
-                    <mainClass>com.microsoft.azure.management.appservice.samples.ManageWebAppWithDomainSsl</mainClass>
+                    <mainClass>com.microsoft.azure.management.appservice.samples.ManageWebAppWithDomainSsl.java</mainClass>
                 </configuration>
             </plugin>
             <plugin>
@@ -48,7 +54,7 @@
                             </descriptorRefs>
                             <archive>
                                 <manifest>
-                                    <mainClass>com.microsoft.azure.management.appservice.samples.ManageWebAppWithDomainSsl</mainClass>
+                                    <mainClass>com.microsoft.azure.management.appservice.samples.ManageWebAppWithDomainSsl.java</mainClass>
                                 </manifest>
                             </archive>
                         </configuration>
